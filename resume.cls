@@ -2,7 +2,7 @@
 % 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ProvidesClass{resume}[CV class]
+\ProvidesClass{resume}[2022/03/10 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -118,20 +118,20 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 %%%%%%%%%%%%%
 \RequirePackage{parskip}
 
-\renewcommand{\section}[1]{
-  \par\vspace{\parskip}
-  {%
-    \LARGE\headingfont\color{headercolor}%
-    \@sectioncolor #1%
-  }
-  \par\vspace{\parskip}
+\newenvironment{body}{
+    \let\oldsection\section
+      \renewcommand{\section}[1]{
+        \par{
+            \Large\headingfont\color{gray} ##1
+        }
+        \par
+      }
 }
-
-\renewcommand{\subsection}[2]{
-  \par\vspace{.5\parskip}%
-  \Large\headingfont\color{headercolor} #2%
-  \par\vspace{.25\parskip}%
-}
+% \renewcommand{\subsection}[2]{
+%   \par\vspace{.5\parskip}%
+%   \Large\headingfont\color{headercolor} #2%
+%   \par\vspace{.25\parskip}%
+% }
 
 \pagestyle{empty}
 
