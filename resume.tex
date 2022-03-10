@@ -1,0 +1,266 @@
+%!TEX TS-program = xelatex
+\documentclass[]{resume}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+% compile the tex file with LuaLaTeX References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+% \usepackage{fontawesome}
+\usepackage[none]{hyphenat}
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \scriptsize,
+    bubble node font = \tiny,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.4cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.4cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.3cm,
+    % set center bubble color
+    bubble center node color = materialblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.4,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.8,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{}{Max Liao}
+{Software Engineer}\\
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  %\includegraphics[scale=0.1]{img/Selfie.png}
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  \section{Contact}
+  ~
+    404 314 7825
+  ~
+  \href{mailto:max.liao@gmail.com}{\textbf{max.liao@gmail.com}}
+  ~
+  \href{github.com/max-liao}{\textbf{github.com/max-liao}}
+  ~
+  \href{www.linkedin.com/in/liao-max}{\textbf{\scriptsize www.linkedin.com/in/liao-max}}
+  ~
+  {\small 2687 Briarlake Rd, Atlanta, GA 30345}
+  ~
+  \section{\large Work Eligibility}
+    ~
+    U.S. Citizen
+    ~
+  % use  \hspace{} or \vspace{} to change bubble size, if needed
+  \section{\large Computer Skills}
+  ~
+    \smartdiagram[bubble diagram]{
+        \textbf{Typescript},
+        \textbf{Vue},
+        \textbf{Angular},
+        \textbf{React},
+        \textbf{Python},
+        \textbf{Matlab},
+        \textbf{C/C++},
+        \textbf{Eagle},
+        \textbf{CAD},
+        \textbf{SQL}
+    }
+~
+\section{\large Technical Skills}
+~
+\textbf{App Development}
+\textbf{End to End Testing}
+\textbf{Unit Testing}
+\textbf{JS Frameworks}
+\textbf{Embedded Systems}
+\textbf{Micro controllers}
+\textbf{3D Printing}
+\textbf{PCB Design}
+\textbf{Technical Writing}
+\textbf{PID Controllers}
+\textbf{Lab Experience}
+\textbf{Organic Chemistry}
+~
+\end{aside}
+
+\section{Highlights}
+    \begin{itemize}
+        \item {Fullstack software engineer with multidisciplinary engineering education}
+        \item {Focus on frontend UX web design}
+        \item {Software development for elevator dispatch touchscreen devices for TKE}
+        \item {C\# app development ATM components for NCR}
+        \item {Embedded systems and software development experience in multiple applications}
+        \item {Thesis work: researching improvements in dissolved carbon analysis with higher \\precision, faster speeds, and more adaptable usage than commercial instruments}
+    \end{itemize}
+~
+\section{Experience}
+\begin{entrylist}
+\entry 
+    {03/19 - now}
+    {Software Engineer}
+    {TKE}
+    {Software development, testing, and support for touchscreen elevator dispatch system. Touchscreen devices including lobby elevator kiosks, car operating panels, and smart mirrors deployed inside the elevator.
+        \begin{itemize}
+            \item Main application communicated with these devices on job sites to control displays, settings, content, software updates... 
+            \item Created an application using ElectronJS to simulate Destination Dispatch of elevator systems.
+        \end{itemize}
+    }
+\entry 
+    {11/18 - 6/19}
+    {Teacher's Assistant}
+    {Georgia Institute of Technology}
+    {Full Stack Flex Web Development - teacher's assistant with Trilogy Education}
+\entry
+    {04/18 - 12/18}
+    {SW/FW Engineer}
+    {NCR Corporation}
+    {Software and firmware support for the ATM hardware division at NCR 
+    \newline
+    Created and supported analysis tool for the Scalable Deposit Module 2}
+  \entry
+    {08/15 - 12/17}
+    {Research Assistant}
+    {Skidaway Institute of Oceanography}
+    {Developed a precision UV-wet chemical oxidation dissolved organic\\ carbon (DOC) analyzer for aqueous samples \begin{itemize}
+  \item Quantitatively measures changes in DOC with a sub-uM target precision two orders of magnitude greater than current commercial devices
+  \item Device is more easily transportable, provides faster analysis, and removes system dependency on blank evaluations
+  \item Optimized with goal of automated and shipboard analyses of DOC for fresh and salt water\end{itemize}
+  }
+  
+  \entry
+    {04/15 - 09/15}
+    {Electrical Engineer}
+    {PhytoSynthetix}
+    {Improvements to a fluorometer for grow chamber monitoring at the University of Georgia horticultural greenhouse}
+    \entry
+    {01/13 - 01/15}
+    {Test Engineer}
+    {Cisco Systems}
+    {Install and maintain a continuous integration test framework for set top boxes
+        \begin{itemize}
+            \item Develop and automate test software and procedures in Python and C
+            \item Generate specification and prototype test equipment per product test and repair requirements
+        \end{itemize}
+    }
+\end{entrylist}
+
+\newpage
+\section{Education}
+    \begin{entrylist}
+      \entry
+        {2015 - 2017}
+        {Master of Science in Biological Engineering}
+        {University of Georgia}
+        {Research Assistant at Skidaway Institute of Oceanography
+        \begin{description}
+        \item Advisers: Dr. Aron Stubbins and Dr. Mark Haidekker
+        \end{description}}
+      \entry
+        {2008 - 2012}
+        {Bachelor of Science in Electrical Engineering}
+        {Georgia Institute of Technology}
+        {Senior Design
+        \begin{itemize}
+        \item Android application and device for tracking bicycling pedaling speeds
+        \end{itemize}
+        Undergraduate Research Opportunities Program
+        \begin{description}
+        \item Adviser: Dr. Manos Tentzeris
+        \end{description}
+        \begin{itemize}
+        \item Design of a multiple antenna energy harvesting circuit involving\\ frequency selective surfaces \end{itemize}
+        }
+    \end{entrylist}
+    \begin{aside}
+    ~
+    ~
+    ~
+      \section{OS Preference}
+        ~
+        %\vspace{0.5cm}
+        \textbf{Linux}\includegraphics[scale=0.40]{img/5stars.png}
+        \textbf{Windows}\includegraphics[scale=0.40]{img/4stars.png}
+        \textbf{iOS}\includegraphics[scale=0.40]{img/3stars.png}
+        ~
+     % \section{Places Lived}
+      %  \vspace{0.5cm}\includegraphics[scale=0.27]{img/Georgia.PNG}
+        ~
+      \section{Languages}
+      ~
+      %  \vspace{0.5cm}
+        \textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
+        \textbf{Mandarin}\includegraphics[scale=0.40]{img/4stars.png}
+        \textbf{French}\includegraphics[scale=0.40]{img/3stars.png}
+        \textbf{Spanish}\includegraphics[scale=0.40]{img/2stars.png}
+        ~
+    \end{aside}
+
+\section{Certifications}
+\begin{entrylist}
+\entry
+    {08/2018}
+    {Full Stack Flex Web Development}
+    {Georgia Institute of Technology}
+    {Professional education certificate for a full stack web development coding bootcamp. Covered a broad range of development tools including Node, jQuery, Express, React, SQL, MongoDB, etc.}
+  \entry
+    {12/2017}
+    {Coastal and Oceanographic Engineering}
+    {University of Georgia}
+    {Graduate certificate for multi-disciplinary program in engineering and marine sciences emphasizing marine instrumentation and numerical modeling of near-shore and coastal processes. Includes course work in engineering and marine sciences as well as a research and design component at the graduate level.}
+\end{entrylist}
+
+\section{Other Info}
+Can read/write French and Spanish\\
+\emph{\includegraphics[scale=1]{img/Chinese.PNG}}\\
+\section{Publications}
+Max Liao\\ \textbf{A Precision UV-Wet Chemical Oxidation Dissolved Organic Carbon Analyzer}\\
+MS Thesis. University of Georgia, 2017
+\\\\
+Wenting Gu, Peng Cheng, Arindam Ghosh, Max Liao, Boxiong Liao, Ali Beskok, Zhili Hao\\
+\textbf{Detection of distributed static and dynamic loads with electrolyte enabled distributed transducers in a polymer based microfluidic device}\\
+\emph{ Journal of Micromechanics and Microengineering, Vol. 23, March 2013, 035015 (15pp), doi:10.1088/09601317/23/3/035015 (featured in IOPselect) }
+\\\\
+ Wenting Gu, Peng Cheng, Arindam Ghosh, Max Liao, Boxiong Liao, Ali Beskok, Zhili Hao\\
+\textbf{A polymer based microfluidic resistive sensor for detecting distributed loads}\\
+\emph{ ASME International Mechanical Engineering Congress and Exposition (IMECE2012), \\ Nov. 9-15, 2012, Houston, Texas, IMECE201287672 (Best Paper Award in the MEMS Division) }
+\\
+\begin{flushleft}
+\end{flushleft}
+\begin{flushright}
+\emph{Max Liao }
+\emph{ Software Engineer}
+\end{flushright}
+\end{document}
