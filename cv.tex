@@ -1,4 +1,4 @@
-%!TEX TS-program = lualatex
+%!TEX TS-program = xelatex
 \documentclass[]{cv}
 \usepackage{afterpage}
 \usepackage{hyperref}
@@ -39,7 +39,7 @@
     % set center bubble color
     bubble center node color = materialblue,
     % define the list of colors usable in the diagram
-    set color list = {materialgreen, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materiallime, materialpurple},
+    set color list = {materialgreen, materialred, materialcyan, green, materialorange, materialamber, materialteal, materialindigo, materiallime, materialpurple},
     % sets the opacity at which the bubbles are shown
     bubble fill opacity = 0.4,
     % sets the opacity at which the bubble text is shown
@@ -111,7 +111,6 @@
 	\textbf{Organic Chemistry}
 	~
 	\section{OS Preference \vspace{0.1cm}}
-	% 	\vspace{0.1cm}
 	\textbf{Linux}\includegraphics[scale=0.40]{img/5stars.png}
 	\textbf{Windows}\includegraphics[scale=0.40]{img/4stars.png}
 	\textbf{iOS}\includegraphics[scale=0.40]{img/3stars.png}
@@ -125,13 +124,12 @@
 \end{aside}
 
 \begin{body}
-	\section{\vspace{0.1cm} Highlights}
+	\section{\vspace{0.05cm} Highlights}
 	\begin{itemize}
 		\item {Fullstack software engineer with focus on frontend UX web design}
 		\item {Software development for elevator dispatch touchscreen devices for TKE}
 		\item {C\# app development ATM components for NCR}
-		\item {Embedded systems and software development experience in multiple applications}
-		      \vspace{0.1cm}
+		\item {Embedded systems and software development experience in multiple applications \vspace{0.05cm}}
 	\end{itemize}
 	\section{Experience}
 	\begin{entrylist}
@@ -139,10 +137,10 @@
 		{03/19 - now}
 		{Software Engineer}
 		{TKE}
-		{Software engineer for touchscreen elevator dispatch system including including lobby elevator kiosks, car operating panels, and smart mirrors deployed inside the elevator
+		{Software development, testing, and support for touchscreen elevator dispatch system including including lobby elevator kiosks, car operating panels, and smart mirrors deployed inside the elevator
 			\begin{itemize}
 				\item {Developed web app to communicate with devices on job sites}
-				\item {App controlled touchscreen displays, settings, content, and software updates originally in AngularJS before upgrade to Angular 11+}
+				\item {App controlled touchscreen displays, settings, content, and software updates originally in AngularJS before upgrade to modern Angular}
 				\item {Created ElectronJS app using Vue to simulate destination dispatch of elevators using RS-485 and UDP}
 				\item {Added Cypress automated end-to-end testing to codebase}
 			\end{itemize}
@@ -186,7 +184,7 @@
 			\end{itemize}
 		}
 	\end{entrylist}
-	\section{Education \vspace{0.1cm}}
+	\section{ \vspace{-0.1cm} Education \vspace{0.1cm} }
 	\par
 	\begin{entrylist}
 		\entry
@@ -196,6 +194,7 @@
 		{Research Assistant at Skidaway Institute of Oceanography
 			\begin{description}
 				\item {Advisers: Dr. Aron Stubbins and Dr. Mark Haidekker}
+				\item {Certificate in Coastal and Oceanographic Engineering}
 			\end{description}}
 		\entry
 		{2008 - 2012}
@@ -211,7 +210,7 @@
 		{2018}
 		{Full Stack Flex Web Development}
 		{Georgia Institute of Technology}
-		{Professional education full stack web development coding bootcamp}
+		{Georgia Tech Professional Education coding bootcamp}
 	\end{entrylist}
 \end{body}
 \end{document}
