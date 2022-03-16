@@ -39,7 +39,7 @@
     % set center bubble color
     bubble center node color = materialblue,
     % define the list of colors usable in the diagram
-    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    set color list = {materialgreen, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materiallime, materialpurple},
     % sets the opacity at which the bubbles are shown
     bubble fill opacity = 0.4,
     % sets the opacity at which the bubble text is shown
@@ -51,8 +51,9 @@
 \definecolor{pblue}{HTML}{0395DE}
 
 \begin{document}
-\header{}{Max Liao}
-{Software Engineer}\\
+\header{Max Liao}{}
+{Software Engineer}
+\par
 % Fake text to add separator      
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
 		.....
@@ -77,12 +78,10 @@
 	~
 	\href{www.linkedin.com/in/liao-max}{\textbf{\scriptsize www.linkedin.com/in/liao-max}}
 	~
-	\section{\large Work Eligibility}
-	~
+	\section{\large Work Eligibility \vspace{0.1cm}}
 	U.S. Citizen
 	% use  \hspace{} or \vspace{} to change bubble size, if needed
-	\section{\large Computer Skills}
-	~
+	\section{\large Computer Skills \vspace{0.2cm}}
 	\smartdiagram[bubble diagram]{
 		\textbf{Typescript},
 		\textbf{Vue},
@@ -93,11 +92,10 @@
 		\textbf{C/C++},
 		\textbf{Eagle},
 		\textbf{CAD},
-		\textbf{SQL}
+		\textbf{SQL},
+		\textbf{RxJS}
 	}
-	~
-	\section{\large Technical Skills}
-	~
+	\section{\large Technical Skills \vspace{0.1cm}}
 	\textbf{App Development}
 	\textbf{UX/UI Design}
 	\textbf{Unit Testing}
@@ -112,35 +110,40 @@
 	\textbf{Lab Experience}
 	\textbf{Organic Chemistry}
 	~
-	\section{OS Preference}
-	~
+	\section{OS Preference \vspace{0.1cm}}
+	% 	\vspace{0.1cm}
 	\textbf{Linux}\includegraphics[scale=0.40]{img/5stars.png}
 	\textbf{Windows}\includegraphics[scale=0.40]{img/4stars.png}
 	\textbf{iOS}\includegraphics[scale=0.40]{img/3stars.png}
 	~
+	\section{Languages \vspace{0.1cm}}
+	\textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
+	\textbf{Mandarin}\includegraphics[scale=0.40]{img/4stars.png}
+	\textbf{French}\includegraphics[scale=0.40]{img/3stars.png}
+	\textbf{Spanish}\includegraphics[scale=0.40]{img/2stars.png}
+	~
 \end{aside}
 
 \begin{body}
-	~
-	\section{Highlights}
+	\section{\vspace{0.1cm} Highlights}
 	\begin{itemize}
-		\item {Fullstack software engineer with Focus on frontend UX web design}
+		\item {Fullstack software engineer with focus on frontend UX web design}
 		\item {Software development for elevator dispatch touchscreen devices for TKE}
 		\item {C\# app development ATM components for NCR}
 		\item {Embedded systems and software development experience in multiple applications}
+		      \vspace{0.1cm}
 	\end{itemize}
-	~
 	\section{Experience}
 	\begin{entrylist}
 		\entry
 		{03/19 - now}
 		{Software Engineer}
 		{TKE}
-		{Software development, testing, and support for touchscreen elevator dispatch system including including lobby elevator kiosks, car operating panels, and smart mirrors deployed inside the elevator
+		{Software engineer for touchscreen elevator dispatch system including including lobby elevator kiosks, car operating panels, and smart mirrors deployed inside the elevator
 			\begin{itemize}
 				\item {Developed web app to communicate with devices on job sites}
-				\item {App controlled touchscreen displays, settings, content, and software updates through ethernet}
-				\item {Created ElectronJS app with VueJS to simulate destination dispatch of elevators using RS-485 and UDP}
+				\item {App controlled touchscreen displays, settings, content, and software updates originally in AngularJS before upgrade to Angular 11+}
+				\item {Created ElectronJS app using Vue to simulate destination dispatch of elevators using RS-485 and UDP}
 				\item {Added Cypress automated end-to-end testing to codebase}
 			\end{itemize}
 		}
@@ -183,8 +186,8 @@
 			\end{itemize}
 		}
 	\end{entrylist}
-	~
-	\section{Education\\}
+	\section{Education \vspace{0.1cm}}
+	\par
 	\begin{entrylist}
 		\entry
 		{2015 - 2017}
@@ -204,57 +207,62 @@
 				\item {Adviser: Dr. Manos Tentzeris}
 			\end{description}
 		}
-	\end{entrylist}
-	~
-	\newpage
-	\section{Certifications\\}
-	\begin{entrylist}
 		\entry
-		{08/2018}
+		{2018}
 		{Full Stack Flex Web Development}
 		{Georgia Institute of Technology}
-		{Professional education certificate for a full stack web development coding bootcamp}
-		\entry
-		{12/2017}
-		{Coastal and Oceanographic Engineering}
-		{University of Georgia}
-		{Graduate certificate for multi-disciplinary program in engineering and marine sciences emphasizing marine instrumentation and numerical modeling of near-shore and coastal processes\\ Includes course work in engineering and marine sciences as well as a research and design component at the graduate level}
+		{Professional education full stack web development coding bootcamp}
 	\end{entrylist}
-	% 	\section{Other Info}
-	%     	~
-	%     	Can read/write French and Spanish\\
-	%     	\emph{\includegraphics[scale=1]{img/Chinese.PNG}}\\
-	% 	\section{Publications}
-	%     	Max Liao\\ \textbf{A Precision UV-Wet Chemical Oxidation Dissolved Organic Carbon Analyzer}\\
-	%     	MS Thesis. University of Georgia, 2017
-	%     	\\\\
-	%     	Wenting Gu, Peng Cheng, Arindam Ghosh, Max Liao, Boxiong Liao, Ali Beskok, Zhili Hao\\
-	%     	\textbf{Detection of distributed static and dynamic loads with electrolyte enabled distributed transducers in a polymer based microfluidic device}\\
-	%     	\emph{ Journal of Micromechanics and Microengineering, Vol. 23, March 2013, 035015 (15pp), doi:10.1088/09601317/23/3/035015 (featured in IOPselect) }
-	%     	\\\\
-	%     	Wenting Gu, Peng Cheng, Arindam Ghosh, Max Liao, Boxiong Liao, Ali Beskok, Zhili Hao\\
-	%     	\textbf{A polymer based microfluidic resistive sensor for detecting distributed loads}\\
-	%     	\emph{ ASME International Mechanical Engineering Congress and Exposition (IMECE2012), \\ Nov. 9-15, 2012, Houston, Texas, IMECE201287672 (Best Paper Award in the MEMS Division) }
-	%     	\\
-	%     	\begin{flushleft}
-	%     	\end{flushleft}
-	\begin{flushright}
-		\emph{Max Liao }
-		\emph{Software Engineer}
-	\end{flushright}
 \end{body}
-
-\begin{aside}
-	~
-	~
-	~
-	\section{Languages}
-	~
-	\textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
-	\textbf{Mandarin}\includegraphics[scale=0.40]{img/4stars.png}
-	\textbf{French}\includegraphics[scale=0.40]{img/3stars.png}
-	\textbf{Spanish}\includegraphics[scale=0.40]{img/2stars.png}
-	~
-\end{aside}
-
 \end{document}
+
+% \newpage
+% 	\section{Certifications\\}
+%     	\begin{entrylist}
+%     		\entry
+%     		{08/2018}
+%     		{Full Stack Flex Web Development}
+%     		{Georgia Institute of Technology}
+%     		{Professional education certificate for a full stack web development coding bootcamp}
+%     		\entry
+%     		{12/2017}
+%     		{Coastal and Oceanographic Engineering}
+%     		{University of Georgia}
+%     		{Graduate certificate for multi-disciplinary program in engineering and marine sciences emphasizing marine instrumentation and numerical modeling of near-shore and coastal processes\\ Includes course work in engineering and marine sciences as well as a research and design component at the graduate level}
+%     	\end{entrylist}
+% % 	\section{Other Info}
+% %     	~
+% %     	Can read/write French and Spanish\\
+% %     	\emph{\includegraphics[scale=1]{img/Chinese.PNG}}\\
+% % 	\section{Publications}
+% %     	Max Liao\\ \textbf{A Precision UV-Wet Chemical Oxidation Dissolved Organic Carbon Analyzer}\\
+% %     	MS Thesis. University of Georgia, 2017
+% %     	\\\\
+% %     	Wenting Gu, Peng Cheng, Arindam Ghosh, Max Liao, Boxiong Liao, Ali Beskok, Zhili Hao\\
+% %     	\textbf{Detection of distributed static and dynamic loads with electrolyte enabled distributed transducers in a polymer based microfluidic device}\\
+% %     	\emph{ Journal of Micromechanics and Microengineering, Vol. 23, March 2013, 035015 (15pp), doi:10.1088/09601317/23/3/035015 (featured in IOPselect) }
+% %     	\\\\
+% %     	Wenting Gu, Peng Cheng, Arindam Ghosh, Max Liao, Boxiong Liao, Ali Beskok, Zhili Hao\\
+% %     	\textbf{A polymer based microfluidic resistive sensor for detecting distributed loads}\\
+% %     	\emph{ ASME International Mechanical Engineering Congress and Exposition (IMECE2012), \\ Nov. 9-15, 2012, Houston, Texas, IMECE201287672 (Best Paper Award in the MEMS Division) }
+% %     	\\
+% %     	\begin{flushleft}
+% %     	\end{flushleft}
+%     	\begin{flushright}
+%     		\emph{Max Liao }
+%     		\emph{Software Engineer}
+%     	\end{flushright}
+% \end{body}
+% \begin{aside}
+% ~
+% 	~
+% 	~
+% 	\section{Languages}
+% 	~
+% 	\textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
+% 	\textbf{Mandarin}\includegraphics[scale=0.40]{img/4stars.png}
+% 	\textbf{French}\includegraphics[scale=0.40]{img/3stars.png}
+% 	\textbf{Spanish}\includegraphics[scale=0.40]{img/2stars.png}
+% 	~
+% \end{aside}
+% \end{document}
