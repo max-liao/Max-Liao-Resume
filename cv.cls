@@ -1,7 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ProvidesClass{cv}[2022/03/10 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
@@ -12,40 +8,16 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-
 %%%%%%%%%%
 % Colors %
 %%%%%%%%%%
 \RequirePackage{xcolor}
 
 \definecolor{white}{RGB}{255,255,255}
-\definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
-\definecolor{lightgray}{HTML}{999999}
-\definecolor{green}{HTML}{C2E15F}
-\definecolor{orange}{HTML}{FDA333}
-\definecolor{purple}{HTML}{D3A4F9}
-\definecolor{red}{HTML}{FB4485}
-\definecolor{blue}{HTML}{6CE0F1}
 \definecolor{pblue}{HTML}{0395DE}
-\definecolor{materialpurple}{HTML}{9C27B0}
-\definecolor{materialindigo}{HTML}{3F51B5}
-\definecolor{materialblue}{HTML}{2196F3}
-\definecolor{materialcyan}{HTML}{00BCD4}
-\definecolor{materialteal}{HTML}{009688}
-\definecolor{materialgreen}{HTML}{4CAF50}
-\definecolor{materiallime}{HTML}{CDDC39}
-\definecolor{materialamber}{HTML}{FFC107}
-\definecolor{materialbrown}{HTML}{795548}
-\definecolor{materialred}{HTML}{FF4436}
-\definecolor{materialorange}{HTML}{FF5722}
 
 \ifdefined\@cv@print
-  \colorlet{green}{gray}
-  \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{red}{gray}
-  \colorlet{blue}{gray}
   \colorlet{fillheader}{white}
   \colorlet{header}{gray}
 \else
@@ -61,24 +33,21 @@
 \usepackage[abspath]{currfile}
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+
 \newfontfamily\bodyfont
 [BoldFont=texgyreheros-bold.otf,
 ItalicFont=texgyreheros-italic.otf,
 BoldItalicFont=texgyreheros-bolditalic.otf]
 {texgyreheros-regular.otf}
+
 \newfontfamily\headingfont[]{texgyreheros-bold.otf}
+
 \newfontfamily\thinfont
 [
   Path          = \currfileabsdir,
   Ligatures     = TeX,
   UprightFont   = fonts/PlayfairDisplay-Regular.ttf,
 ]{playfair}
-% [
-%   Path          = \currfileabsdir,
-%   Ligatures     = TeX,
-%   UprightFont   = fonts/Anton.ttf,
-% ]{playfair}
-% []{lato-hairline.ttf}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont
@@ -89,12 +58,10 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 {texgyreheros-regular.otf}
 
 \setmathfont{texgyreheros-regular.otf}
-%%%
 
 %%%%%%%%%%
 % Header %
 %%%%%%%%%%
-
 \RequirePackage{tikz}
 
 \newcommand{\rolefont}{%
@@ -119,34 +86,23 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \vspace{-2\parskip}
 }
 
-
 %%%%%%%%%%%%%
 % Structure %
 %%%%%%%%%%%%%
 \RequirePackage{parskip}
 
-\newenvironment{body}{
+\newenvironment{body}{%
     \let\oldsection\section
-      \renewcommand{\section}[1]{
-        \par{
-            \Large\headingfont\color{gray} ##1
-        }
-        \par
+      \renewcommand{\section}[1]{%
+        \par{\Large\headingfont\color{gray} ##1}\par
       }
 }
-% \renewcommand{\subsection}[2]{
-%   \par\vspace{.5\parskip}%
-%   \Large\headingfont\color{headercolor} #2%
-%   \par\vspace{.25\parskip}%
-% }
 
 \pagestyle{empty}
-
 
 %%%%%%%%%%%%%%%%%%%%
 % List environment %
 %%%%%%%%%%%%%%%%%%%%
-
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
@@ -162,11 +118,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
     #4\vspace{\parsep}%
   }\\}
 
-
 %%%%%%%%%%%%%%
 % Side block %
 %%%%%%%%%%%%%%
-
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -188,7 +142,6 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 %%%%%%%%%%%%%%%%
 % Bibliography %
 %%%%%%%%%%%%%%%%
-
 \RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
 
 \DeclareFieldFormat[article]{title}{#1\par}
@@ -202,8 +155,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \printnames{author}%
   \par%
   \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+  {\footnotesize\addfontfeature{Color=lightgray}\itshape%
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
@@ -212,8 +164,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
     \setunit*{\addcomma\space}%
     \printfield{year}%
     \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+  }\par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{inproceedings}{%
@@ -222,16 +173,14 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \printnames{author}%
   \par%
   \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}%
+  {\footnotesize\addfontfeature{Color=lightgray}%
     \printfield{booktitle}%
     \setunit{\addcomma\space}%
     \printfield{year}%
     \setunit{\addcomma\space}%
     \printlist{location}%
     \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+  }\par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{misc}{%
@@ -240,8 +189,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \printnames{author}%
   \par%
   \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+  {\footnotesize\addfontfeature{Color=lightgray}\itshape%
     \printfield{booktitle}%
     \setunit*{\addcomma\space}%
     \printfield{note}%
@@ -250,8 +198,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
     \setunit{\addcomma\space}%
     \printlist{location}%
     \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+  }\par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{report}{%
@@ -260,43 +207,43 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \printnames{author}%
   \par%
   \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+  {\footnotesize\addfontfeature{Color=lightgray}\itshape%
     \printfield{type}%
     \setunit{\space}%
     \printfield{number}%
     \setunit{\addcomma\space}%
     \printfield{year}%
     \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+  }\par\vspace{0.3\baselineskip}
 }
 
 \DeclareNameFormat{author}{%
   \small\addfontfeature{Color=lightgray}%
   \ifblank{#3}{}{#3\space}#1%
-  \ifthenelse{\value{listcount}<\value{liststop}}
-    {\addcomma\space}
-    {}%
+  \ifthenelse{\value{listcount}<\value{liststop}}{\addcomma\space}{}%
 }
 
-\newcommand{\printbibsection}[2]{
+\newcommand{\printbibsection}[2]{%
   \begin{refsection}
     \nocite{*}
     \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=subbibliography]
   \end{refsection}
 }
 
-\DeclareSortingScheme{chronological}{
-  \sort[direction=descending]{\field{year}}
-  \sort[direction=descending]{\field{month}}
+\DeclareSortingScheme{chronological}{%
+  \sort[direction=descending]{\field{year}}%
+  \sort[direction=descending]{\field{month}}%
 }
 
-
-
-%%%%%%%%%%%%%%%%
-% Other tweaks %
-%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%
+% Geometry + Hyperref %
+%%%%%%%%%%%%%%
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage[colorlinks=true, linkcolor=black, urlcolor=pblue]{hyperref}
+
+\newcommand{\cvlink}[2]{%
+  \begingroup
+    \hypersetup{hidelinks}%
+    \textcolor{pblue}{\href{#2}{#1}}%
+  \endgroup
+}
